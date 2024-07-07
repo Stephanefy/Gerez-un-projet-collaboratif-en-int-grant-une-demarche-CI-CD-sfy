@@ -1,4 +1,4 @@
-name: Continuous Integration with Angular
+name: Continuous Integration with Bobapp's frontend
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Continuous Integration with Maven Run Tests when push to Main branch and newly created PRs
+name: Continuous Integration with Bobapp's backend
 
 on:
   push:
@@ -30,11 +30,6 @@ jobs:
       - name: Test with Maven
         run: mvn -B test --file back/pom.xml
 
-      - name: Log coverage percentages to workflow output
-        run: |
-          echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
-          echo "branches = ${{ steps.jacoco.outputs.branches }}"
-    
       - name: Generate JaCoCo badge
         id: jacoco-badge
         uses: cicirello/jacoco-badge-generator@v2
