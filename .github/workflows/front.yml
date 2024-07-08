@@ -1,4 +1,4 @@
-name: Continuous Integration with Bobapp's frontend
+name: Continuous integration and Image deployment of Bobapp's frontend
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  build-test-package-deploy:
     runs-on: ubuntu-latest
 
     steps:
